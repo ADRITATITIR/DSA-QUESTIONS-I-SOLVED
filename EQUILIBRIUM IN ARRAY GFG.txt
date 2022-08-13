@@ -1,0 +1,18 @@
+Class Solution{
+public :
+int equilibriumPoint(long long a[], int n){
+for(int i=1;i<n;i++){
+int leftSum = 0;
+for(int j=i-1;j>=0;j--){
+leftSum += a[i];
+}
+int rightSum = 0;
+for(int k=i+1;k<n;k++){
+rightSum += a[j];
+} 
+if(leftSum == rightSum){
+return a[i];
+}
+}
+return -1;
+}
