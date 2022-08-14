@@ -1,0 +1,40 @@
+struct Pair {
+    int min ;
+    int max ;
+}
+
+class Solution
+{
+   public:
+    int findSum(int A[], int N)
+    {
+    	struct Pair minmax;
+    	int i;
+    	
+    	
+    	if(N == 1){
+    	    minmax.max = A[0];
+    	    minmax.min = A[1];
+    	    return minmax;
+    	}
+    	if(A[1] > A[0]){
+    	    minmax.max = A[1];
+    	    minmax.min = A[0];
+    	}
+    	else{
+    	    minmax.max = A[0];
+    	    minmax.min = A[1];
+    	}
+    	for(int i=2;i<N;i++){
+    	    if(A[i] < minmax.min)
+    	    minmax.min=A[i];
+    	    else if(A[i] > minmax.max)
+    	    minmax.max = A[i]  
+    	}
+    	
+    }
+    }
+return minmax;
+    
+
+};
